@@ -8,7 +8,8 @@ body {
     background-color: rgb(218, 225, 231);
 }
 
-h1, h2 {
+h1,
+h2 {
     color: black;
 }
 
@@ -23,22 +24,22 @@ h1, h2 {
     margin: 0 1rem;
 }
 
-.btn:hover{
+.btn:hover {
     background-color: rgb(179, 10, 10);
     color: aliceblue;
 }
 
-.btn--alt{
+.btn--alt {
     background-color: transparent;
     color: rgb(179, 10, 10);
 }
 
-.btn--alt:hover{
+.btn--alt:hover {
     background-color: rgb(179, 10, 10);
     color: aliceblue;
 }
 
-.card{
+.card {
     background-color: aliceblue;
     border-radius: 4px;
     box-shadow: 0 1px 4px black;
@@ -47,11 +48,11 @@ h1, h2 {
     margin-bottom: 10px;
 }
 
-.actions{
+.actions {
     text-align: right;
 }
 
-.modal{
+.modal {
     box-shadow: 0 1px 4px black;
     border-radius: 6px;
     background-color: aliceblue;
