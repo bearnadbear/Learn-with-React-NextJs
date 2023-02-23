@@ -30,11 +30,12 @@ h1, h2 {
 
 .btn--alt{
     background-color: transparent;
-    color: rgb(202, 46, 19);
+    color: rgb(179, 10, 10);
 }
 
 .btn--alt:hover{
-    background-color: aliceblue;
+    background-color: rgb(179, 10, 10);
+    color: aliceblue;
 }
 
 .card{
