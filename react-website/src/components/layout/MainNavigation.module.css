@@ -4,13 +4,13 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: rgb(184, 37, 37);
-    padding: 0 5%;
+    background-color: #77002e;
+    padding: 0 2%;
 }
 
 .logo {
     font-size: 2rem;
-    color: aliceblue;
+    color: white;
     font-weight: bold;
 }
 
@@ -22,25 +22,25 @@
     align-items: baseline;
 }
 
+.header li {
+    margin-left: 3rem;
+}
+
 .header a {
     text-decoration: none;
     font-size: 1.5rem;
-    color: aliceblue;
-}
-
-.header li {
-    margin-left: 3rem;
+    color: #fcb8d2;
 }
 
 .header a.active,
 .header a:active,
 .header a:hover {
-    color: aliceblue;
+    color: white;
 }
 
 .badge {
-    background-color: rgb(184, 37, 37);
-    color: aliceblue;
+    background-color: #cc2062;
+    color: white;
     border-radius: 12px;
     padding: 0 1rem;
     margin-left: 0.5rem;
