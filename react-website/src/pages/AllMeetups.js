@@ -5,19 +5,19 @@ import MeetupList from "../components/meetups/MeetupList";
 function AllMeetupsPage() {
     const [isLoading, setIsLoading] = useState(true);
     const [loadedMeetups, setLoadedMeetups] = useState([]);
-
+    
     useEffect(() => {
         setIsLoading(true);
-
+        
         fetch(
             'https://react-getting-started-new-default-rtdb.firebaseio.com/meetups.json'
-        )
+            )
             .then((response) => {
                 return response.json();
             })
             .then((data) => {
                 const meetups = [];
-
+                
                 for (const key in data){
                     const meetup = {
                         id: key,
@@ -33,8 +33,9 @@ function AllMeetupsPage() {
     }, []);
 
     if (isLoading) {
-        return (alert('Data is empty!'));
-    }
+        return alert('Loading ...');
+    }  
+    
 
     return (
         <section>
