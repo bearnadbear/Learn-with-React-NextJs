@@ -3,9 +3,17 @@ import Link from 'next/Link';
 import classes from './button.module.css'
 
 export default function Button(props) {
+    if (props.link) {
+        return (
+            <Link href={props.link}>
+                <span className={classes.btn}>{props.children}</span>
+            </Link>
+        );
+    }
+
     return (
-        <Link href={props.link}>
-            <span className={classes.btn}>{props.children}</span>
-        </Link>
+        <button className={classes.btn} onClick={props.onClick}>
+            {props.children}
+        </button>
     );
-}; 
+};
