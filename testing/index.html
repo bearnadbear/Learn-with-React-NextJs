@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+
+    <title>Hello React!</title>
+
+    <script src="https://unpkg.com/react@^16/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@16.13.0/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+  </head>
+
+  <body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+      const root = document.getElementById("root");
+
+      function Clock(props) {
+        const name = "Faris Firdaus Ariputra";
+
+        const createElement =
+          ("h1", { className: "create-Element" }, "Hohoho!");
+
+        return (
+          <div>
+            <h1>Halo, dunia!</h1>
+            <p>Nama saya adalah {name}</p>
+            <h2>Ini {props.date.toLocaleTimeString()}.</h2>
+            {createElement}
+          </div>
+        );
+      }
+
+      function tick() {
+        const element = (
+          <center>
+            <Clock date={new Date()} />
+          </center>
+        );
+
+        ReactDOM.render(element, root);
+      }
+
+      setInterval(tick, 1000);
+      // React code will go here
+    </script>
+  </body>
+</html>
