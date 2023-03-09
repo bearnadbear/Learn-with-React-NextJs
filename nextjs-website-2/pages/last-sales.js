@@ -1,46 +1,67 @@
 import { useEffect, useState } from "react";
 
-export default function LastSalesPage() {
-  const [sales, setSales] = useState();
-  const [isLoading, setIsLoading] = useState(false);
+import useSWR from "swr";
+
+export default function LastSalesPage(props) {
+  const [sales, setSales] = useState(props.sales);
+  //   const [isLoading, setIsLoading] = useState(false);
+
+  const { data, error } = useSWR(
+    "https://nextjs-course-bf940-default-rtdb.firebaseio.com/sales.json"
+  );
+
+  console.log(data);
 
   useEffect(() => {
-    setIsLoading(true);
-    fetch("https://nextjs-course-bf940-default-rtdb.firebaseio.com/sales.json")
-      .then((responese) => responese.json())
-      .then((data) => {
-        const transformedSales = [];
+    if (data) {
+      const transformedSales = [];
 
-        for (const key in data) {
-          transformedSales.push({
-            id: key,
-            username: data[key].username,
-            volume: data[key].volume,
-          });
-        }
+      for (const key in data) {
+        transformedSales.push({
+          id: key,
+          username: data[key].username,
+          volume: data[key].volume,
+        });
+      }
+      setSales(transformedSales);
+    }
+  }, [data]);
 
-        setSales(transformedSales);
-        setIsLoading(false);
-      });
-  }, []);
-
-  if (isLoading) {
-    return <h1>Loading ...</h1>;
+  if (error) {
+    return <p>Failed to load.</p>;
   }
 
-  if (!sales) {
-    return <h1>No data yet</h1>;
+  if (!data && !sales) {
+    return <p>Loading...</p>;
   }
 
   return (
-    <div>
-      <ul>
-        {sales.map((sale) => (
-          <h1 key={sale.id}>
-            {sale.username} - ${sale.volume}
-          </h1>
-        ))}
-      </ul>
-    </div>
+    <ul>
+      {sales.map((sale) => (
+        <li key={sale.id}>
+          {sale.username} - ${sale.volume}
+        </li>
+      ))}
+    </ul>
   );
+}
+
+export async function getStaticProps() {
+  const response = await fetch(
+    "https://nextjs-course-bf940-default-rtdb.firebaseio.com/sales.json"
+  );
+
+  const data = await response.json();
+
+  const transformedSales = [];
+
+  for (const key in data) {
+    transformedSales.push({
+      id: key,
+      username: data[key].username,
+      volume: data[key].volume,
+    });
+  }
+
+  return { props: { sales: transformedSales }, revalidate: 10 };
 }
