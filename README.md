@@ -8,3 +8,4 @@ Author : Faris Firdaus Ariputra
 - Bagian 5 - Page Pre-Rendering & Data Fetching No. 88 - 117 (next-website-2/pages-phase-1)
 - Bagian 6 - Project Time: Page Pre-rendering & Data Fetching No. 118 - 127 (nextjs-website)
 - Bagian 7 - Optimizing NextJs Apps No. 128 - 140 (nextjs-website)
+- Bagian 8 - Adding Backend Code with API Routes (Fullstack React) No. 141 - 152 (nextjs-website-2)
