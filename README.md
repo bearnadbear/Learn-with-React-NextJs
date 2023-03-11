@@ -10,3 +10,4 @@ Author : Faris Firdaus Ariputra
 - Bagian 7 - Optimizing NextJs Apps No. 128 - 140 (nextjs-website)
 - Bagian 8 - Adding Backend Code with API Routes (Fullstack React) No. 141 - 152 (nextjs-website-2)
 - Bagian 9 - Project Time: API Routes No. 153 - 167 (nextjs-website)
+- Bagian 10 - Working with App-wide State (React Context) No. 168 - 177 ()
