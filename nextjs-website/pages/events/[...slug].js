@@ -9,15 +9,14 @@ import ResultsTitle from "../../components/events/results-title";
 import Button from "../../components/ui/button";
 import ErrorAlert from "../../components/ui/error-alert";
 
-export default function FilteredEventsPage(props) {
+function FilteredEventsPage(props) {
   const [loadedEvents, setLoadedEvents] = useState();
   const router = useRouter();
 
   const filterData = router.query.slug;
 
   const { data, error } = useSWR(
-    "https://nextjs-course-c81cc-default-rtdb.firebaseio.com/events.json",
-    (url) => fetch(url).then((res) => res.json())
+    "https://nextjs-events-dc013-default-rtdb.firebaseio.com/events.json"
   );
 
   useEffect(() => {
@@ -165,3 +164,5 @@ export default function FilteredEventsPage(props) {
 //     },
 //   };
 // }
+
+export default FilteredEventsPage;

@@ -2,7 +2,7 @@ import Link from "next/link";
 
 import classes from "./button.module.css";
 
-export default function Button(props) {
+function Button(props) {
   if (props.link) {
     return (
       <Link href={props.link} className={classes.btn}>
@@ -17,3 +17,5 @@ export default function Button(props) {
     </button>
   );
 }
+
+export default Button;
