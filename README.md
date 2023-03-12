@@ -12,3 +12,7 @@ Author : Faris Firdaus Ariputra
 - Bagian 9 - Project Time: API Routes - No. 153 - 167 (nextjs-website)
 - Bagian 10 - Working with App-wide State (React Context) - No. 168 - 177 (nextjs-website)
 - Bagian 11 - Complate App Example: Build a Full Blog A - Z - No. 178 - 206 (nexjs-blog)
+- Bagian 12 - Deploying NextJs Apps - No. 207 - 217 (nextjs-blog)
+- Bagian 13 - Adding Authentication - No. 218 - 239 ()
+- Bagian 14 - Optional: NextJs Summary - No. 240 - 274 ()
+- Bagian 15 - Course Roundup - No. 275 - 276
