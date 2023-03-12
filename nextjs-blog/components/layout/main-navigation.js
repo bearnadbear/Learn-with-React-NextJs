@@ -1,6 +1,6 @@
 import Link from "next/link";
-import Logo from "./logo";
 
+import Logo from "./logo";
 import styles from "./main-navigation.module.css";
 
 export default function MainNavigation() {
@@ -9,7 +9,6 @@ export default function MainNavigation() {
       <Link href="/">
         <Logo />
       </Link>
-
       <nav>
         <ul>
           <li>

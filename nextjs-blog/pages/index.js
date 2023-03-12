@@ -1,37 +1,32 @@
 import { Fragment } from "react";
+import Head from "next/head";
 
-import FeaturedPost from "../components/home-page/featured-posts";
+import FeaturedPosts from "../components/home-page/featured-posts";
 import Hero from "../components/home-page/hero";
+import { getFeaturedPosts } from "../lib/posts-util";
 
-export default function HomePage() {
-  const DummyData = [
-    {
-      title: "Ruangguru",
-      image: "dummy.jpg",
-      excerpt: "Satu dua tiga empat lima, kita coba sama - sama.",
-      date: "2023-04-06",
-      slug: "slug-1",
-    },
-    {
-      title: "Ruangguru",
-      image: "dummy.jpg",
-      excerpt: "Satu dua tiga empat lima, kita coba sama - sama.",
-      date: "2023-04-06",
-      slug: "slug-2",
-    },
-    {
-      title: "Ruangguru",
-      image: "dummy.jpg",
-      excerpt: "Satu dua tiga empat lima, kita coba sama - sama.",
-      date: "2023-04-06",
-      slug: "slug-3",
-    },
-  ];
-
+export default function HomePage(props) {
   return (
     <Fragment>
+      <Head>
+        <title>Max' Blog</title>
+        <meta
+          name="description"
+          content="I post about programming and web development."
+        />
+      </Head>
       <Hero />
-      <FeaturedPost posts={DummyData} />
+      <FeaturedPosts posts={props.posts} />
     </Fragment>
   );
+}
+
+export function getStaticProps() {
+  const featuredPosts = getFeaturedPosts();
+
+  return {
+    props: {
+      posts: featuredPosts,
+    },
+  };
 }

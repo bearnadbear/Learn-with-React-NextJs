@@ -7,18 +7,16 @@ export default function Hero() {
     <section className={styles.hero}>
       <div className={styles.image}>
         <Image
-          src="/images/test.jpg"
-          alt="An image showing Faris Firdaus A."
+          src="/images/site/test.jpg"
+          alt="An image showing Bearnadbear"
           width={300}
           height={300}
         />
       </div>
-
-      <h1 className="">Hi, I'am Faris Firdaus Ariputra</h1>
-
-      <p className="">
-        This blog about web development - especially frontend frameworks likes
-        Angular or React
+      <h1>Hi, I'm Faris Firdaus Ariputra</h1>
+      <p>
+        I blog about web development - especially frontend frameworks like
+        Angular or React.
       </p>
     </section>
   );

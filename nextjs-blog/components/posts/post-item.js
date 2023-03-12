@@ -1,5 +1,5 @@
-import Image from "next/legacy/image";
 import Link from "next/link";
+import Image from "next/legacy/image";
 
 import styles from "./post-item.module.css";
 
@@ -27,7 +27,6 @@ export default function PostItem(props) {
             layout="responsive"
           />
         </div>
-
         <div className={styles.content}>
           <h3>{title}</h3>
           <time>{formattedDate}</time>
